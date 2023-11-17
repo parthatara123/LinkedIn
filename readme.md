@@ -6,7 +6,7 @@ This Node.js application demonstrates how to upload an image post on LinkedIn us
 
 1. Clone the repository:
 
-    git clone https://github.com/your-username/linkedin-post-image-text.git
+    git clone https://github.com/parthatara123/LinkedIn.git
 
 2. Install dependencies:
 
@@ -28,6 +28,8 @@ This Node.js application demonstrates how to upload an image post on LinkedIn us
    - `postText`: Text for the post.
    - `image`: Image file to upload.
    - `title`: Image title
+  
+   - Make sure that while selecting an image from local, it should be in 'Media' folder.
 
 4. The application will upload the image to LinkedIn and create a text post with the uploaded image and provided text.
 
