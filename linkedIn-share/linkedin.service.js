@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-
+// function to register image on linkedIn
 async function registerImageOnLinkedIn(token, companyId) {
   try {
     const postBody = {
@@ -49,6 +49,7 @@ async function uploadImagesToLinkedIn(token, uploadUrl, imageData, mimetype) {
         }
 }
 
+// share image post on linkedIn profile
 async function shareImagesToLinkedIn(token, companyId, postTitle, asset, title) {
   try {
         const request = {
@@ -107,7 +108,7 @@ async function getShareLink(token, postId) {
       }
 }
 
-// Function to post an article to company's Webpage, not in use right now
+//TODO: Function to post an article to company's Webpage, not in use right now
 async function postArticleToCompany(companyId, postText) {
   try {
     const {companyId, postText} = req.body;
@@ -143,7 +144,6 @@ async function postArticleToCompany(companyId, postText) {
         linkedinResponse: response.data,
     });
 } catch (error) {
-    // Handle errors and respond with an error message
         res.status(500).json({
         success: false,
         message: 'Error posting on LinkedIn',
