@@ -26,7 +26,7 @@ async function registerImageOnLinkedIn(token, companyId) {
             'LinkedIn-Version': 202310 // can change the version or use env variable for this
           },
       });
-
+      console.log('response.data', response.data)
       return response.data 
   } catch (error) {
       throw new Error('Error uploading images to LinkedIn');
@@ -43,7 +43,9 @@ async function uploadImagesToLinkedIn(token, uploadUrl, imageData, mimetype) {
             'Content-Type': mimetype
           },
         });
+        console.log('response', response)
           return true
+          
         } catch (error) {
           throw new Error('Error uploading images to LinkedIn');
         }
@@ -89,6 +91,7 @@ async function shareImagesToLinkedIn(token, companyId, postTitle, asset, title) 
 
           return response; 
   } catch (error) {
+    console.log('error in step 3', error)
       throw new Error('Error uploading images to LinkedIn');
   }
 }
@@ -152,8 +155,6 @@ async function postArticleToCompany(companyId, postText) {
 }
 }
  
-
-
 
 module.exports = {
     uploadImagesToLinkedIn,

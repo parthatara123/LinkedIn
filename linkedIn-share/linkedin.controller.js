@@ -55,9 +55,9 @@ async function sharePostOnLinkedIn(req, res, imagePath){
         }
 
         // TODO: step 4: get share url, this is giving authentication error so commenting this part for now.
-        // const postIdArray = resp.data.id.split(':')
-        // const postId = postIdArray[postIdArray.length -1]
-        // const shareUrl = await getShareLink(token, postId)
+        const postIdArray = resp.data.id.split(':')
+        const postId = postIdArray[postIdArray.length -1]
+        const shareUrl = await getShareLink(token, postId)
 
 
         // successful response
@@ -66,7 +66,7 @@ async function sharePostOnLinkedIn(req, res, imagePath){
             message: 'Post successful!',
             statusCode: resp?.data?.status,
             linkedinResponse: resp.data,
-            // shareUrl: shareUrl
+            shareUrl: shareUrl
         });
        
     } catch (error) {
